@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int main(int arc, char ** v)
+{
+	//freopen("in.ebu", "r", stdin);
+	
+	int i, tc, x, y, sum = 0;
+	
+	scanf("%d", &tc);
+	
+	while(tc--)
+	{
+	   scanf("%d %d", &x, &y);
+	   
+	   if(x > y)
+	   {
+	      for(i = y + 1, sum = 0; i < x; i++)
+	      {
+	         if(i % 2 != 0)
+	         {
+	            sum += i;
+	         }
+	      }
+	   }
+	   
+	   else if(y >= x)
+	   {
+	      for(i = x + 1, sum = 0; i < y; i++)
+	      {
+	         if(i % 2 != 0)
+	         {
+	            sum += i;
+	         }
+	      }
+	   }
+	   
+	   printf("%d\n", sum);
+	}
+	
+	return 0;
+}
